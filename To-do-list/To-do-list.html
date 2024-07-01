@@ -74,6 +74,10 @@
             todoList.appendChild(li);
         }
 
+	// Add default tasks
+        const defaultTasks = ["Supervised Learning Project", "Software Design Project"];
+        defaultTasks.forEach((task, index) => addTask(task));
+
         // Event listener for form submission
         document.getElementById("todo-form").addEventListener("submit",
             function (event) {
@@ -99,11 +103,6 @@
                         event.target.parentElement.parentElement.parentElement.remove();
                     }
                 });
-
-
-        // Add default tasks
-        const defaultTasks = ["Supervised Learning Project", "Software Design Project"];
-        defaultTasks.forEach((task, index) => addTask(task));
     </script>
 </body>
 
