@@ -45,7 +45,7 @@ export default function Home() {
         <section className="container mx-auto px-6 py-6">
           <h1 className="text-3xl font-bold mb-2 text-gray-800">Manage Your Tasks with Ease</h1>
           <h2 className="text-xl mb-4 text-gray-600">Stay organized, focused, and in control</h2>
-          <TodoItem user={user} />
+          {user ? <TodoItem user={user} /> : null}
         </section>
       </main>
 
